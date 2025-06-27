@@ -1,47 +1,30 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import {RouterView, RouterLink} from 'vue-router'
+import Dashboard from "@/pages/Dashboard.vue";
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+  <header style="padding: 1rem; background: #2c3e50; color: white;">
+    <h1>💰 FinTrack</h1>
+    <nav>
+      <RouterLink to="/" style="margin-right: 10px;">Dashboard</RouterLink>
+      <RouterLink to="/add">Tambah</RouterLink>
+    </nav>
   </header>
 
-  <main>
-    <TheWelcome />
+  <main style="padding: 1rem;">
+    <RouterView/>
   </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+a.router-link-active {
+  font-weight: bold;
+  text-decoration: underline;
 }
 </style>
