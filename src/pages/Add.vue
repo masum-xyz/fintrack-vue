@@ -37,8 +37,8 @@ export default {
       this.title = '';
       this.date = '';
       this.amount = null;
-      // Optionally, redirect or show a success message
-      alert('Transaction added!');
+      // Redirect to dashboard
+      this.$router.push({ name: 'Dashboard' });
     }
   }
 }

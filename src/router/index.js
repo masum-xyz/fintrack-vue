@@ -5,7 +5,7 @@ import Add from "@/pages/Add.vue";
 import Edit from "@/pages/Edit.vue";
 
 const routes = [
-    { path: "/", component: Dashboard, name: "dashboard" },
+    { path: "/", component: Dashboard, name: "Dashboard" },
     { path: "/add", component: Add, name: "add" },
     { path: "/edit/:id", component: Edit, name: "edit"}
 ]

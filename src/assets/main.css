@@ -28,6 +28,11 @@ body {
     justify-content: center;
 }
 
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
 @media (max-width: 480px) {
     #app {
         box-shadow: none;
